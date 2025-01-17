@@ -22,8 +22,11 @@ if __name__ == '__main__':
     vista de un operador que va a codificar un mensaje para ser 
     trasmitido.
     El operador configura la máquina según parámetros acordados con el 
-    operador en el receptor o envía junto con el texto los parámetors 
-    encriptados siguendo un formato pre acordado:
+    operador  receptor, codifica la información de configuración a usar
+    para encriptar el mensaje, codigica el mensaje y lo adjunta a la 
+    información anterior y envía el nuevo mensaje.  los parámetros 
+    encriptados de configuración siguen un formato pre acordado:
+    
     ------------------------------------------------------------------
 
     por ejemplo:
@@ -31,7 +34,7 @@ if __name__ == '__main__':
         a sus equivalentes alfabéticos y luego encriptar.
     2-  la configuración del cableado del panel son caracteres alfabéticos
         basta con agruparlos en un formato definido y también encriptarlo.
-    3-  El datos encriptados se pueden unir al enjcriptado del mensaje en
+    3-  El datos encriptados se pueden unir al encriptado del mensaje en
         un orden pre definido, por ejemplo en la cabecera del nuevo mensaje
         (por simplificación del ejemplo) siguiendo algunas reglas.
         Por ejemplo:
@@ -59,7 +62,7 @@ if __name__ == '__main__':
 
 
     # --------------------------------------------------------------------
-    #       Mensaje que se quieree enviar a desstino
+    #       Mensaje que se quiere enviar a destino
     # --------------------------------------------------------------------
 
     mensaje = 'esta es una prueba para el encriptado de la maquina enigma sin usar el panel de conexiones'
@@ -230,5 +233,8 @@ if __name__ == '__main__':
     descripcion = '\n\tEtapa 9: Se envia el mensaje comppleto a los destinatarios por el' \
                   '\n\tmedio escogido: radio, cable, correo, etc.'
     print(f'{descripcion}')
+
+    # Se envía  el mensaje codificado y ensamblado al estino usndo cualquier medio: radio, cable, correo, etc.
+    # Aquí  se simula guardándolo en disco.
 
     enigma.guarda_datos_para_destino(mensaje_encriptado, 'codigo_enviado.json')
