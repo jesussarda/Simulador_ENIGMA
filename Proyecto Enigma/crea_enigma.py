@@ -11,8 +11,8 @@ from libreria_clases import ROTOR, REFLECTOR, PANEL, ENIGMA, guarda_equipo
 """
     -----------------------------------------------------------------
     Este script equivale a la fabricación y almacenamiento en una caja 
-    del juego de rotores que se entregaba tanto al emisor como al receptor
-    junto con la máquina ENIGMA física. La máquina 
+    del juego de rotores y deflector que se entregaba tanto al emisor 
+    como al receptor junto con la máquina ENIGMA.
     -----------------------------------------------------------------
 
     Sobre el alfabeto en el teclado:
@@ -49,7 +49,8 @@ from libreria_clases import ROTOR, REFLECTOR, PANEL, ENIGMA, guarda_equipo
     
     Cada vez que se ejecuta este script, cambia la configuración del 
     cabeado de todos los rotores y del reflector, porque el cableado
-    se escoje en forma aleatoria. Se debe ejecutar una sóla vez.
+    se escoje en forma aleatoria. Se debe ejecutar una sóla vez y enviar 
+    copia a los operadores de origen y destino.
     
 -----------------------------------------------------------------
 """
