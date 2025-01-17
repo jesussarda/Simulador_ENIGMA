@@ -17,13 +17,15 @@ from libreria_clases import ROTOR, PANEL, ENIGMA, lee_equipo
 if __name__ == '__main__':
 
     """
-     ------------------------------------------------------------------
-     Se simula la configuración de una máquina ENIGMA desde el punto de 
-     vista un operador que va a decodificar un codigo recibido.
-     El operador configura ionicialmente la máquina segun parámetros 
-     acordados con el operador en el origen.
-     ------------------------------------------------------------------
-     """
+    ------------------------------------------------------------------
+    Se simula la configuración de una máquina ENIGMA desde el punto de 
+    vista un operador que va a decodificar un codigo recibido.
+    El operador configura inicialmente la máquina según parámetros 
+    acordados con el operador en el origen, decodifica la cabecera que
+    contiene la configuración de la máquina para desencriptar el mensaje
+    reconfigura la maquina y desencripta el mensaje
+    ------------------------------------------------------------------
+    """
 
     # ---------------------------------------------------------------------
     #       Configuración bàsica de de la máquina
