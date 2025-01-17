@@ -1,8 +1,8 @@
 # **Simulación de una máquina ENIGMA civil o Militar**
 
-##**Características de la máquina ENIGMA:**
+## **Características de la máquina ENIGMA:**
 
-###En el caso civil la configuración seria:
+### En el caso civil la configuración seria:
 - Tres rotores intercambiables. los rotores son discos con contactos eléctricos en ambas caras conectados por cables internamente.
 - Un reflector. también es un disco, pero con contactos eléctricos en una sola cara. Internamente los contactos van conectados por cables puenteados.
 - no tiene panel de conexiones. 
@@ -10,7 +10,7 @@
 La señal eléctrica debido a una tecla pulsada viaja por la secuencia de rotores hasta el reflector y retorna por los mismos rotores en secuencia invertida hasta el bombillo que identifica la letra codificada.
         
            
-###En el caso militar tiene:
+### En el caso militar tiene:
 
 - Una colección de Hasta ocho posibles rotores intercambiables.
 - un reflector.
@@ -21,6 +21,7 @@ Dependiendo del componente militar hay distintos modelos y complejidades, siendo
 tiene:
            
 NOTAS:
+
 1- La configuración interna de los rotores son cables cruzados y los conexionados son únicos. Se hacen copias idénticas de estos rotores para que tanto el emisor como los receptores tengan la misma máquina. En el equipamiento de enigma viene una caja con más de tres rotores, hasta ocho en el caso de los submarinos de la armada. En la máquina hay alojamiento para tres rotores (cuatro en los últimos modelos para submarinos) y se instalan esos rotores en cualquier orden. Eso cambia el encriptado de la máquina. Los rotores pueden girar para cambiar y aumentar la complejidad del encriptado hasta 26 posiciones (según las letras del teclado), pero pueden girar más de una vez. En este caso el rotor contiguo gira una posición.  Una forma de avisar al operador de destino como configurar su máquina para decodificar el mensaje recibido, es incluir en el mensaje codificado el orden y número de los rotores  así como la posición de giro y el cabledo del panel de conexiones usados para la codificación también encriptado siguiendo unas reglas pre acordadas.
 
 2- La configuración del reflector es básicamente la misma que la de un rotor y al nivel de la codificación se puede interpretaar como un rotor. 
@@ -28,9 +29,9 @@ NOTAS:
 3- El panal e conexiones esta formado por un frente con clavijas, una por cada letra, y una colección de cables de interconexión. Al puentear una letra con otra se intercambia el orden, de tal manera que se puede interpretar como si fuera un rotor que se ha configurado manualmente. No necesariamente todos las letras deben estar puenteadas, puede haber un solo puente.
 
 
-##Reglas para la simulación:
+## Reglas para la simulación:
 
-###secuencia de ejecución:
+### secuencia de ejecución:
 
 1- El script ***<crea_enigma.py>*** es la primera rutina que debe ser ejecutada. La razón es que en este script se crean todos elementos que forman la máquina: los rotores, reflector, panel, teclado...
 Es el equivalente a fabricar la máquina ENIGMA con todos sus aditamentos. Se hace separado porque al crearse los rotores y el reflector se configura el conexionado interno aleatoriamente. Pero ocurre que la misma configuración deben ser copiadas tanto para el origen y el destino de los mensajes. Es una misma máquina para el emisor como para el receptor y el encriptado no funciona si el la configuración de los rotores y reflector cambia en ambas partes.
